@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-header {
+    background-color: #cccccc; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 2px solid #b3b3b3;
+}
+
+.header-logo {
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #666;
+    border: 1px solid #b3b3b3;
+}
+
+.header-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.header-search input {
+    padding: 8px 12px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.9rem;
+    width: 180px;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #808080; 
+    width: 200px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    border-right: 1px solid #666666;
+}
+
+.sidebar-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #999999;
+    padding: 12px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.sidebar-btn:hover {
+    background-color: #e6e6e6;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.employee-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd; 
+    border-radius: 16px; 
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    display: flex; 
+    gap: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+
+    justify-content: center;
+    text-align: center;
+}
+
+.photo-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; 
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;           /* Evita que o texto encoste na borda caso a imagem quebre */
+    font-size: 0.75rem;     /* Tamanho ideal para o texto alternativo não quebrar layout */
+    color: #777777;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.card-btn {
+    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 5px 15px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.card-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.card-id {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.employee-name {
+    font-size: 1.8rem; 
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.employee-info {
+    font-size: 1.1rem;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.employee-info strong {
+    font-weight: normal;
+    color: #000000;
+}
+
+.employee-email {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-top: 10px;
+    word-break: break-all;
+}
+
+.navigation-controls {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 90px;
+    transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.app-footer {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85rem;
+    color: #444444;
+    border-top: 1px solid #b3b3b3;
+}
