@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Funcionários</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-logo">
+            <span class="logo-text">Logo</span>
+        </div>
+        <h1 class="header-title">Consulta de Funcionários</h1>
+        <div class="header-search">
+            <input 
+                type="number" 
+                id="search-input" 
+                placeholder="Digite o ID desejado" 
+                min="1"
+            >
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <aside class="sidebar">
+            <button type="button" class="sidebar-btn active">Funcionários</button>
+            <button type="button" class="sidebar-btn">Departamentos</button>
+            <button type="button" class="sidebar-btn">Filiais</button>
+            <button type="button" class="sidebar-btn">Diretoria</button>
+            <button type="button" class="sidebar-btn">Gerência</button>
+        </aside>
+
+        <main class="content-area">
+            
+            <section class="employee-card" id="employee-card">
+                
+                <div class="card-left">
+                    <div class="photo-container">
+                        <img id="employee-photo" src="" alt="Foto do Funcionário">
+                    </div>
+                    <button type="button" id="btn-change" class="card-btn">Alterar</button>
+                    <span id="employee-id" class="card-id">ID: --</span>
+                </div>
+
+                <div class="card-right">
+                    <h2 id="employee-name" class="employee-name">Carregando...</h2>
+                    <p class="employee-info"><strong>Cargo:</strong> <span id="employee-title">--</span></p>
+                    <p class="employee-info"><strong>Depto:</strong> <span id="employee-dept">--</span></p>
+                    <p id="employee-email" class="employee-email">--</p>
+                </div>
+
+            </section>
+
+            <div class="navigation-controls">
+                <button type="button" id="btn-prev" class="nav-btn">Anterior</button>
+                <button type="button" id="btn-next" class="nav-btn">Próximo</button>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="app-footer">
+        <p>Desenvolvido por <span id="developer-name">Alxélio</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
