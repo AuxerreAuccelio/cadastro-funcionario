@@ -64,3 +64,38 @@ async function fetchEmployeeData(id) {
 
 }
 
+
+
+btnNext.addEventListener('click', () => {
+    currentId++;
+    searchInput.value = ''; // Limpa o campo de busca para manter o visual limpo
+    fetchEmployeeData(currentId);
+});
+
+btnPrev.addEventListener('click', () => {
+    if (currentId > 1) {
+        currentId--;
+        searchInput.value = '';
+        fetchEmployeeData(currentId);
+    } else {
+        alert("O limite inferior foi atingido. O ID mínimo é 1.");
+    }
+});
+
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const searchedId = parseInt(searchInput.value.trim(), 10);
+
+        // Valida se o valor digitado é um número válido e maior que 0
+        if (!isNaN(searchedId) && searchedId > 0) {
+            currentId = searchedId;
+            fetchEmployeeData(currentId);
+        } else {
+            alert("Por favor, insira um ID numérico válido (maior que 0).");
+        }
+    }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    fetchEmployeeData(currentId);
+});
