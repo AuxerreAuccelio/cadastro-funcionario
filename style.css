@@ -20,7 +20,32 @@ body {
     justify-content: space-between;
     padding: 15px 30px;
     border-bottom: 2px solid #b3b3b3;
+    position: relative;
 }
+
+.card-search-container {
+    width: 100%;
+    max-width: 550px;      /* Tem a mesma largura máxima do card para alinhar perfeitamente */
+    display: flex;
+    justify-content: center; /* Centraliza o input horizontalmente */
+    margin-bottom: 15px;    /* Cria um espaçamento vertical de 15px entre o input e o card */
+}
+
+.card-search-container input {
+    padding: 10px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.95rem;
+    width: 220px;           /* Define uma largura padrão e elegante para o campo */
+    text-align: center;     /* Mantém o texto digitado centralizado dentro do campo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave para dar profundidade */
+}
+
+.card-search-container input:focus {
+    border-color: #999999;  /* Escurece a borda quando o usuário clica para digitar */
+}
+
 
 .header-logo {
     background-color: #ffffff;
@@ -55,6 +80,9 @@ body {
 .main-container {
     display: flex;
     flex: 1;
+
+    flex-direction: row-reverse; 
+    height: calc(100vh - 82px);
 }
 
 .sidebar {
@@ -63,8 +91,17 @@ body {
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
-    gap: 15px; 
-    border-right: 1px solid #666666;
+    padding: 80px 15px;
+    justify-content: space-between;
+
+    /* gap: 15px; 
+    border-left: 1px solid #777777; */
+
+    position: fixed;       
+    top: 0;                
+    right: 0;              
+    height: 100vh;         
+    z-index: 10;
 }
 
 .sidebar-btn {
@@ -77,6 +114,8 @@ body {
     text-align: center;
     width: 100%;
     transition: background-color 0.2s;
+
+    border-radius: 10px;
 }
 
 .sidebar-btn:hover {
@@ -91,6 +130,7 @@ body {
     justify-content: center;
     padding: 40px;
     background-color: #ffffff;
+    margin-right: 200px;
 }
 
 .employee-card {

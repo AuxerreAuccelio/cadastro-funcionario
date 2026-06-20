@@ -5,27 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Funcionários</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
 </head>
 <body>
 
+    <!-- CABEÇALHO: Logo e Título Centralizado (Campo de busca removido daqui) -->
     <header class="app-header">
         <div class="header-logo">
             <span class="logo-text">Logo</span>
         </div>
         <h1 class="header-title">Consulta de Funcionários</h1>
-        <div class="header-search">
-            <input 
-                type="number" 
-                id="search-input" 
-                placeholder="Digite o ID desejado" 
-                min="1"
-            >
-        </div>
+        <div class="header-placeholder"></div> <!-- Espaçador para manter o título centralizado -->
     </header>
 
+    <!-- CONTEÚDO PRINCIPAL -->
     <div class="main-container">
         
+        <!-- BARRA LATERAL (Lado Direito) -->
         <aside class="sidebar">
             <button type="button" class="sidebar-btn active">Funcionários</button>
             <button type="button" class="sidebar-btn">Departamentos</button>
@@ -34,10 +29,23 @@
             <button type="button" class="sidebar-btn">Gerência</button>
         </aside>
 
+        <!-- ÁREA CENTRAL -->
         <main class="content-area">
             
+            <!-- NOVO LUGAR DO INPUT: Centralizado acima do Card -->
+            <div class="card-search-container">
+                <input 
+                    type="number" 
+                    id="search-input" 
+                    placeholder="Digite o ID desejado" 
+                    min="1"
+                >
+            </div>
+
+            <!-- O CARD DO FUNCIONÁRIO -->
             <section class="employee-card" id="employee-card">
                 
+                <!-- LADO ESQUERDO -->
                 <div class="card-left">
                     <div class="photo-container">
                         <img id="employee-photo" src="" alt="Foto do Funcionário">
@@ -46,6 +54,7 @@
                     <span id="employee-id" class="card-id">ID: --</span>
                 </div>
 
+                <!-- LADO DIREITO -->
                 <div class="card-right">
                     <h2 id="employee-name" class="employee-name">Carregando...</h2>
                     <p class="employee-info"><strong>Cargo:</strong> <span id="employee-title">--</span></p>
@@ -55,6 +64,7 @@
 
             </section>
 
+            <!-- NAVEGAÇÃO INFERIOR -->
             <div class="navigation-controls">
                 <button type="button" id="btn-prev" class="nav-btn">Anterior</button>
                 <button type="button" id="btn-next" class="nav-btn">Próximo</button>
@@ -63,8 +73,9 @@
         </main>
     </div>
 
+    <!-- RODAPÉ -->
     <footer class="app-footer">
-        <p>Desenvolvido por <span id="developer-name">Alxélio</span></p>
+        <p>Desenvolvido por <span id="developer-name">AuxerreAuccelio</span></p>
     </footer>
 
     <script src="script.js"></script>
